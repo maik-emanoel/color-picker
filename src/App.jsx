@@ -1,5 +1,7 @@
+
 import { useState } from "react"
 import './index.css'
+import { CircleHalf, Palette, Sun } from "@phosphor-icons/react"
 
 export default function App() {
   const [hue, setHue] = useState(272)
@@ -21,22 +23,31 @@ export default function App() {
         <h1>Color Picker</h1>
 
         <div>
-          <input 
-            type="range"
-            value={hue}
-            max={360}
-            onChange={(e) => handleInputChange(e, setHue)} 
-          />
-          <input 
-            type="range"
-            value={saturation}
-            onChange={(e) => handleInputChange(e, setSaturation)} 
-          />
-          <input 
-            type="range"
-            value={lightness}
-            onChange={(e) => handleInputChange(e, setLightness)}
-          />
+          <div>
+            <Palette />
+            <input 
+              type="range"
+              value={hue}
+              max={360}
+              onChange={(e) => handleInputChange(e, setHue)} 
+            />
+          </div>
+          <div>
+            <Sun />
+            <input 
+              type="range"
+              value={saturation}
+              onChange={(e) => handleInputChange(e, setSaturation)} 
+            />
+          </div>
+          <div>
+            <CircleHalf />
+            <input 
+              type="range"
+              value={lightness}
+              onChange={(e) => handleInputChange(e, setLightness)}
+            />
+          </div>
         </div>
       </div>
   )
