@@ -15,6 +15,10 @@ export default function App() {
     background: `hsl(${hue}, ${saturation}%, ${lightness}%)`,
   };
 
+  const colorStyle = {
+    color: `hsl(${hue}, ${saturation}%, ${lightness}%)`,
+  };
+
   return (
     <div className="bg-[#151515] max-w-[430px] w-full min-h-[660px] relative overflow-hidden rounded-lg pt-[210px] flex flex-col items-center shadow-xl shadow-[#0a0a0a]">
       <div
@@ -25,11 +29,19 @@ export default function App() {
         }}
       ></div>
 
-      <h1 className="text-[32px] leading-[38px] text-center text-white my-20">Color Picker</h1>
+      <h1
+        className="text-[32px] leading-[38px] text-center my-20 font-bold"
+        style={{ 
+          WebkitTextStroke: `1px ${colorStyle.color}`,
+          WebkitTextFillColor: 'transparent'
+        }}
+      >
+        Color Picker
+      </h1>
 
       <ul className="flex flex-col gap-14 items-center w-[90%] max-w-[300px] mx-auto">
         <li className="flex gap-4 w-full items-center">
-          <Palette size={24} color="white"/>
+          <Palette size={24} color="white" />
           <input
             type="range"
             value={hue}
@@ -38,12 +50,12 @@ export default function App() {
             id="input-hue"
             className="flex-1 h-[5px] bg-hueGradient rounded-xl"
             style={{
-              "--thumb-color": backgroundStyle.background
+              "--thumb-color": backgroundStyle.background,
             }}
           />
         </li>
         <li className="flex gap-4 w-full items-center">
-          <Sun size={24} color="white"/>
+          <Sun size={24} color="white" />
           <input
             type="range"
             value={saturation}
@@ -52,7 +64,7 @@ export default function App() {
           />
         </li>
         <li className="flex gap-4 w-full items-center">
-          <CircleHalf size={24} color="white"/>
+          <CircleHalf size={24} color="white" />
           <input
             type="range"
             value={lightness}
