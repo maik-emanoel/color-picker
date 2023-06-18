@@ -21,7 +21,7 @@ Após o desenvolvimento do projeto inicial, adicionei novas features, tais quais
 
 - Layout responsivo (Adaptado para telas menores);
 - Botões funcionais;
-- Efeitos hover/animatação;
+- Efeitos hover/animação;
 - Entre outras pequenas modificações.
 
 ## 🔖 Layout
