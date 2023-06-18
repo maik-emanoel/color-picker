@@ -30,7 +30,7 @@ export default function App() {
       ></div>
 
       <h1
-        className="text-[34px] leading-[38px] text-center my-20 font-bold"
+        className="text-[34px] leading-[38px] text-center my-20 font-bold overflow-hidden animate-pulse"
         style={{ 
           WebkitTextStroke: `.8px ${colorStyle.color}`,
           WebkitTextFillColor: 'transparent'
