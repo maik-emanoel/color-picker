@@ -40,7 +40,7 @@ export default function App() {
       </h1>
 
       <ul className="flex flex-col gap-14 items-center w-[90%] max-w-[300px] mx-auto">
-        <li className="flex gap-4 w-full items-center">
+        <li className="flex gap-4 w-full items-center" title="Matiz">
           <Palette size={24} color="white" />
           <input
             type="range"
@@ -54,7 +54,7 @@ export default function App() {
             }}
           />
         </li>
-        <li className="flex gap-4 w-full items-center">
+        <li className="flex gap-4 w-full items-center" title="Saturação">
           <Sun size={24} color="white" />
           <input
             type="range"
@@ -63,7 +63,7 @@ export default function App() {
             className="flex-1 h-[5px] rounded-xl bg-[#D9D9D9]"
           />
         </li>
-        <li className="flex gap-4 w-full items-center">
+        <li className="flex gap-4 w-full items-center" title="Brilho">
           <CircleHalf size={24} color="white" />
           <input
             type="range"
