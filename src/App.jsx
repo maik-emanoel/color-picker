@@ -20,9 +20,9 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#151515] max-w-[430px] w-full min-h-[660px] relative overflow-hidden rounded-lg pt-[210px] flex flex-col items-center shadow-xl shadow-[#0a0a0a]">
+    <div className="bg-[#151515] max-w-[430px] w-full min-h-[660px] relative overflow-hidden rounded-lg pt-[210px] flex flex-col items-center shadow-xl shadow-[#0a0a0a] sm:h-[100vh] sm:rounded-none sm:max-w-none">
       <div
-        className="absolute w-[846px] h-[846px] -top-[630px] -left-[204px] rounded-full"
+        className="absolute w-[846px] h-[846px] -top-[630px] -left-[204px] rounded-full sm:left-2/4 sm:translate-x-[-50%]"
         style={{
           ...backgroundStyle,
           boxShadow: `0px 0px 53px 13px ${backgroundStyle.background}`,
@@ -30,7 +30,7 @@ export default function App() {
       ></div>
 
       <h1
-        className="text-[34px] leading-[38px] text-center my-20 font-bold overflow-hidden animate-pulse"
+        className="text-[34px] leading-[38px] text-center my-20 font-bold overflow-hidden animate-pulse sm:mt-28"
         style={{ 
           WebkitTextStroke: `.8px ${colorStyle.color}`,
           WebkitTextFillColor: 'transparent'
